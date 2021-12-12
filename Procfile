@@ -1,1 +1,1 @@
-web: gunicorn wezihackb.wsgi --log-file -
+web: gunicorn wezihack.wsgi --log-file -

@@ -1,1 +1,1 @@
-web: gunicorn wezihack.wsgi
+web: gunicorn pollme.wsgi --log-file -

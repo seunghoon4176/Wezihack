@@ -221,10 +221,3 @@ def endpoll(request, poll_id):
         return render(request, 'polls/poll_result.html', {'poll': poll})
     else:
         return render(request, 'polls/poll_result.html', {'poll': poll})
-
-
-
-
-@login_required()
-def ilzeung(request):
-    return render(request, 'polls/ilzeung.html')

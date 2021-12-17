@@ -16,5 +16,4 @@ urlpatterns = [
          views.choice_delete, name='choice_delete'),
     path('<int:poll_id>/', views.poll_detail, name='detail'),
     path('<int:poll_id>/vote/', views.poll_vote, name='vote'),
-    path('list/ilzeung/', views.ilzeung, name='ilzeung'),
 ]

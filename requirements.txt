@@ -2,10 +2,7 @@ asgiref==3.4.1
 Django==3.2.5
 pytz==2021.1
 sqlparse==0.4.1
-<<<<<<< HEAD
 pillow==8.3.2
-=======
-pillow==8.3.2
-gunicorn==20.1.0
 django-heroku==0.0.0
->>>>>>> parent of 2fa5ffc (hey)
+whitenoise==5.3.0
+gunicorn==20.1.0

@@ -2,36 +2,228 @@
 <!DOCTYPE html>
 <html lang="ko">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>제주제일고 정보 사이트</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-        crossorigin="anonymous">
+    <title>정보 사이트</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/fd9591a7e3.js" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+        body {
+            background: rgb(58, 57, 57);
+            color: white;
+        
+        }
+
+  
+
+        @media (prefers-color-scheme: light) {
+            body {
+            background: white;
+            color: black;
+        } 
+
+
+            }
+
+        .nav-link:hover {
+            background-color: rgb(58, 57, 57) !important
+        }
+        
+        .nav-link .fa {
+            transition: all 1s
+        }
+        
+        .nav-link:hover .fa {
+            transform: rotate(360deg)
+        }
+
+        .sticky {
+            position: -webkit-fixed; /* 사파리 브라우저 지원 */
+            position: fixed;
+            top: 50px;
+        }
+        
+        .buttoncontainer {
+            text-align:center;
+            
+
+        }
+
+        .iframeprinter {
+            text-align:center;
+        }
+
+        .imagecontainer {
+            text-align:center;
+        }
+
+        .classes {
+            text-align:center;
+            display: block;   
+            border: none;   
+            height: 100vh;   
+            width: 100vw;
+        }
+
+
+
+    </style>
 
     {% block custom_css %}{% endblock custom_css %}
 
 </head>
 
+
 <body>
     {% include 'includes/navbar.html' %}
-
+    
+    {% include 'includes/sidebar.html' %}
     {% block content %}
-
     {% endblock content %}
 
-
     <!-- All javascript files goes under here    -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+    <script>
+        var x = document.createElement("iframe");
+        
+        function Calendar1() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar2() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar3() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar4() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar5() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar6() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar7() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar8() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar9() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar10() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar11() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+        function Calendar12() {
+            x.setAttribute("src", "https://calendar.google.com/calendar/embed?src=c_e37oje61clhnlh30njp6qbrhrg%40group.calendar.google.com&ctz=Asia%2FSeoul");
+            x.setAttribute("style", "border:0");
+            x.setAttribute("width", "800");
+            x.setAttribute("height", "600");
+            x.setAttribute("frameborder", "0");
+            x.setAttribute("scrolling", "no");
+            document.getElementsByClassName("iframeprinter")[0].appendChild(x);
+        }
+    
+    </script>
+
+
+    <div class="iframeprinter">
+
+    </div>
 
 </body>
+
+
+
 
 </html>

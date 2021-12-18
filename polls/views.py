@@ -221,3 +221,26 @@ def endpoll(request, poll_id):
         return render(request, 'polls/poll_result.html', {'poll': poll})
     else:
         return render(request, 'polls/poll_result.html', {'poll': poll})
+
+
+
+
+@login_required()
+def ilzeung(request):
+    return render(request, 'polls/ilzeung.html')
+
+@login_required()
+def map(request):
+    return render(request, 'polls/map.html')
+
+@login_required()
+def classes(request):
+    return render(request, 'polls/classes.html')
+
+@login_required()
+def food(request):
+    return render(request, 'polls/food.html')
+
+@login_required()
+def tong(request):
+    return render(request, 'polls/tong.html')

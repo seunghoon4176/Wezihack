@@ -16,4 +16,9 @@ urlpatterns = [
          views.choice_delete, name='choice_delete'),
     path('<int:poll_id>/', views.poll_detail, name='detail'),
     path('<int:poll_id>/vote/', views.poll_vote, name='vote'),
+    path('list/ilzeung/', views.ilzeung, name='ilzeung'),
+    path('list/map/', views.map, name='map'),
+    path('list/classes/', views.classes, name='classes'),
+    path('list/food/', views.food, name='food'),
+    path('list/tong/', views.tong, name='tong'),
 ]

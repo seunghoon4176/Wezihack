@@ -1,28 +1,30 @@
-<div class="text-black bg-dark" style="width: 250px;"> 
-
-    <div class="sticky">
-
-        <hr>
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none"> 
-
-            <svg class="bi me-2" width="40" height="32"> </svg> 
-
-                <span class="fs-4">메뉴</span> </a>
-
-        <hr>
-
-        <ul class="nav nav-pills flex-column mb-auto" >
-
-            <li class="nav-item"> <a href="{% url 'polls:list' %}" class="nav-link active" aria-current="page">  <i class="fas fa-clipboard-list"></i>   <span class="ms-2">게시판</span> </a> </li>
-            <li> <a href="{% url 'polls:map' %}" class="nav-link text-black">   <i class="fas fa-map-marked-alt"></i>                          <span class="ms-2">지도</span> </a> </li>
-            <li> <a href="{% url 'polls:classes' %}" class="nav-link text-black">   <i class="fas fa-clock"></i>                       <span class="ms-2">시간표</span> </a> </li>
-            <li> <a href="{% url 'polls:ilzeung' %}" class="nav-link text-black">   <i class="far fa-calendar-alt"></i>                                   <span class="ms-2">일정</span> </a> </li>
-            <li> <a href="{% url 'polls:food' %}" class="nav-link text-black">   <i class="fas fa-utensils"></i>                               <span class="ms-2">급식</span> </a> </li>
-            <li> <a href="{% url 'polls:tong' %}" class="nav-link text-black">   <i class="fas fa-print"></i>                             <span class="ms-2">가정통신문</span> </a> </li>
-        </ul>
-
-        <hr>
-
+{% if request.user.is_authenticated %}
+    <div class="text-black bg-dark" style="width: 250px;" id="sidebar"> 
+        <div class="sticky">
+            <hr>
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none"> 
+    
+                <svg class="bi me-2" width="40" height="32"> </svg> 
+    
+                    <span class="fs-4">메뉴</span> </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto" >
+    
+                <li class="nav-item"> <a href="{% url 'polls:list' %}" class="nav-link active" aria-current="page">  <i class="fas fa-clipboard-list"></i>   <span class="ms-2">게시판</span> </a> </li>
+                <li> <a href="{% url 'polls:map' %}" class="nav-link text-black">   <i class="fas fa-map-marked-alt"></i>                          <span class="ms-2">지도</span> </a> </li>
+                <li> <a href="{% url 'polls:classes' %}" class="nav-link text-black">   <i class="fas fa-clock"></i>                       <span class="ms-2">시간표</span> </a> </li>
+                <li> <a href="{% url 'polls:ilzeung' %}" class="nav-link text-black">   <i class="far fa-calendar-alt"></i>                                   <span class="ms-2">일정</span> </a> </li>
+                <li> <a href="{% url 'polls:food' %}" class="nav-link text-black">   <i class="fas fa-utensils"></i>                               <span class="ms-2">급식</span> </a> </li>
+                <li> <a href="{% url 'polls:tong' %}" class="nav-link text-black">   <i class="fas fa-print"></i>                             <span class="ms-2">가정통신문</span> </a> </li>
+            </ul>
+    
+            <hr>
+    
+        </div>
     </div>
+    
 
-</div>
+{% else %}
+    
+{% endif %}
+

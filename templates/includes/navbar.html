@@ -1,13 +1,9 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar-expand-sm navbar-light bg-dark">
     
     <a class="navbar-brand" href="{% url 'home' %}"><i class="fas fa-person-booth"></i></a>
 
-    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        
     </button>
 
 
@@ -19,10 +15,8 @@
                 <a class="nav-link" href="{% url 'home' %}">홈 화면 <span class="sr-only">(current)</span></a>
             </li>
 
-            {% if request.user.is_authenticated %}
-
-
-            {% endif %}
+            <button class="favorite styled" type="button" onClick="getShow()">사이드바 켜기</button>
+            <button class="favorite styled" type="button" onClick="getHide()">사이드바 끄기</button>
 
         </ul>
 

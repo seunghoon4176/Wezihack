@@ -15,8 +15,6 @@
                 <a class="nav-link" href="{% url 'home' %}">홈 화면 <span class="sr-only">(current)</span></a>
             </li>
 
-            <button class="favorite styled" type="button" onClick="getShow()">사이드바 켜기</button>
-            <button class="favorite styled" type="button" onClick="getHide()">사이드바 끄기</button>
 
         </ul>
 
@@ -26,9 +24,13 @@
         <div class="navbar-nav ms-auto">
 
             {% if request.user.is_authenticated %}
+            <button class="favorite styled" type="button" onClick="getShow()">사이드바 켜기</button>
+            <button class="favorite styled" type="button" onClick="getHide()">사이드바 끄기</button>
             <a class="nav-link" href="{% url 'polls:list_by_user' %}">나의 설문조사들</a>
             <a class="nav-link" href="{% url 'accounts:logout' %}">로그아웃</a>
             {% else %}
+            <button class="favorite styled" type="button" onClick="getShow()">사이드바 켜기</button>
+            <button class="favorite styled" type="button" onClick="getHide()">사이드바 끄기</button>
             <a class="nav-link" href="{% url 'accounts:login' %}">로그인</a>
             <a class="nav-link" href="{% url 'accounts:register' %}">회원가입</a>
             {% endif %}
